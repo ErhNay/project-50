@@ -1,7 +1,6 @@
 const sections = document.querySelectorAll('section');
 
 const trans = document.querySelector('.trans');
-console.log(trans);
 
 const gradient = ['coral', 'chartreuse', 'tomato', 'cadetblue'];
 
@@ -18,7 +17,6 @@ const navScroll = function (entries) {
     const elementIndex = entry.target.getAttribute('data-index');
 
     const coordinates = activeLink.getBoundingClientRect();
-    console.log(coordinates);
 
     const directions = {
       height: coordinates.height,
@@ -46,4 +44,6 @@ const observer = new IntersectionObserver(navScroll, options);
 
 sections.forEach(function (section) {
   observer.observe(section);
+
+  console.log(section.getBoundingClientRect());
 });

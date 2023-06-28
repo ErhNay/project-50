@@ -63,5 +63,5 @@ section img {
 .trans {
   position: absolute;
   z-index: -10;
-  background-color: coral;
+  background-color: rgb(80, 255, 208);
 }
